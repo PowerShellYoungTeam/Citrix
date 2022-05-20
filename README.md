@@ -77,6 +77,6 @@ Function to change DDC's (We need to set our physical machines to use Multi DDCs
 
 Function to search for errors in Citrix Event logs, use like below (FYI – Ignore the red writing, that is good that it can’t find the error! If you see - 6 Error Citrix ICA could not configure Thinwire and switch to the remote ICA display. Then VDA needs reinstalled)
 
-Get-CitrixEventLogs Computer01
+### Get-CitrixEventLogs Computer01
 
 If you get an error saying no events found, that is good, if you get an error saying no citrix event log found, VDA isnt installed or fully installed
