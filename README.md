@@ -55,8 +55,28 @@ If you forget what the commands/function names are, the easy way to get them is 
 
 ### Get-Command -Module Citrix_VDA_Support_Tools
 
-Check-CitrixWorkspaceandVDAVersion
+## Check-CitrixWorkspaceandVDAVersion
 
 Function to Check Citrix Workspace and VDA version, use like below 
 
-## Check-CitrixWorkspaceandVDAVersion Computer01
+### Check-CitrixWorkspaceandVDAVersion Computer01
+
+## Correct-SystemTime
+
+Function to correct wrong time and date on remote machines as if it’s too far out, VDA won’t register, use like below (FYI – this assumes the time and date on your machine is correct)
+
+### Correct-SystemTime Computer01
+
+## Fix-CitrixVDA
+
+Function to change DDC's (We need to set our physical machines to use Multi DDCs and add in the DDCs)  and restart Citrix Desktops Services, Use like below (FYI doesn’t change reg setting on VM as they don’t need to be, just restarts services, also there us built in 10 second pause to start services)
+
+### Fix-CitrixVDA Computer01
+
+## Get-CitrixEventLogs
+
+Function to search for errors in Citrix Event logs, use like below (FYI – Ignore the red writing, that is good that it can’t find the error! If you see - 6 Error Citrix ICA could not configure Thinwire and switch to the remote ICA display. Then VDA needs reinstalled)
+
+Get-CitrixEventLogs Computer01
+
+If you get an error saying no events found, that is good, if you get an error saying no citrix event log found, VDA isnt installed or fully installed
